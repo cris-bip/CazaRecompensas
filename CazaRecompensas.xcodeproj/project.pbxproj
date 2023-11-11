@@ -15,6 +15,7 @@
 		C225F0A62AFFE7DF0059BD88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C225F0A42AFFE7DF0059BD88 /* LaunchScreen.storyboard */; };
 		C225F0AE2AFFE8A30059BD88 /* BountyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225F0AD2AFFE8A30059BD88 /* BountyListTableViewController.swift */; };
 		C225F0B02AFFE9AA0059BD88 /* Fugitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225F0AF2AFFE9AA0059BD88 /* Fugitive.swift */; };
+		C225F0B22AFFF9D90059BD88 /* InternetMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C225F0B12AFFF9D90059BD88 /* InternetMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C225F0A72AFFE7DF0059BD88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C225F0AD2AFFE8A30059BD88 /* BountyListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyListTableViewController.swift; sourceTree = "<group>"; };
 		C225F0AF2AFFE9AA0059BD88 /* Fugitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fugitive.swift; sourceTree = "<group>"; };
+		C225F0B12AFFF9D90059BD88 /* InternetMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C225F0A72AFFE7DF0059BD88 /* Info.plist */,
 				C225F0AD2AFFE8A30059BD88 /* BountyListTableViewController.swift */,
 				C225F0AF2AFFE9AA0059BD88 /* Fugitive.swift */,
+				C225F0B12AFFF9D90059BD88 /* InternetMonitor.swift */,
 			);
 			path = CazaRecompensas;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				C225F09E2AFFE7D90059BD88 /* ViewController.swift in Sources */,
 				C225F09A2AFFE7D80059BD88 /* AppDelegate.swift in Sources */,
 				C225F0AE2AFFE8A30059BD88 /* BountyListTableViewController.swift in Sources */,
+				C225F0B22AFFF9D90059BD88 /* InternetMonitor.swift in Sources */,
 				C225F09C2AFFE7D80059BD88 /* SceneDelegate.swift in Sources */,
 				C225F0B02AFFE9AA0059BD88 /* Fugitive.swift in Sources */,
 			);
