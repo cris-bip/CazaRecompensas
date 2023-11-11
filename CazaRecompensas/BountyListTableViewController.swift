@@ -14,19 +14,23 @@ class BountyListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = URL(string: "https://janzelaznog.com/DDAM/iOS/BountyHunter/fugitives.json")!
+        let url = URL(string: "http://janzelaznog.com/DDAM/iOS/BountyHunter/fugitives.json")!
         
         let session = URLSession.shared
         var httpResponse = HTTPURLResponse()
                     
         let task = session.dataTask(with: url) { (data, response, error) in
             do{
-                var loadedFugitives = try JSONDecoder().decode([Fugitive].self, from: data!)
+                self.loadedFugitives = try JSONDecoder().decode([Fugitive].self, from: data!)
                 
                 self.loadedFugitives.forEach { Fugitive in
-                    
                     print(Fugitive.fugitiveid)
                 }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
             }catch{
                 print(error)
             }
@@ -38,24 +42,23 @@ class BountyListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return loadedFugitives.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as UITableViewCell
 
-        // Configure the cell...
-
+        let fugitive = loadedFugitives[indexPath.row]
+        cell.textLabel?.text = fugitive.name
+        cell.detailTextLabel?.text = String(format:"%d", fugitive.bounty)
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
